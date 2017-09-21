@@ -14,7 +14,7 @@ then
 	exit 1
 fi
 
-if ["$2" == ""]
+if [ "$2" == "" ]
 then
 	echo "You must enter a valid destination path for the .csv files"
 	exit 2
