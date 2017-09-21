@@ -31,7 +31,7 @@ do
 	sqlite3 $db<<- EXIT_HERE
 	.mode csv
 	.headers on
-	.output $2$1.csv
+	.output '$loc/$i.csv'
 	SELECT * FROM $i;
 	.exit
 	EXIT_HERE
