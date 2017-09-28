@@ -25,10 +25,12 @@ loc=$2
 
 t=($(sqlite3 $db ".tables"))
 
+# i is the table, t is the list of tables in the database
 # For each table in the database
 for i in "${t[@]}"
 do
 	sqlite3 $db<<- EXIT_HERE
+	.show
 	.mode csv
 	.headers on
 	.output '$loc/$i.csv'
