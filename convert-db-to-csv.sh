@@ -30,7 +30,6 @@ t=($(sqlite3 $db ".tables"))
 for i in "${t[@]}"
 do
 	sqlite3 $db<<- EXIT_HERE
-	.show
 	.mode csv
 	.headers on
 	.output '$loc/$i.csv'
